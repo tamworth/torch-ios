@@ -102,6 +102,9 @@
   // load image
   luaopen_libimage(L);
   [self requireFrameworkPackage:@"image" frameworkResourcesPath:frameworkResourcesPath];
+    
+  // load cjson
+  luaopen_cjson(L);
 
   return;
 }

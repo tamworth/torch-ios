@@ -24,6 +24,16 @@ for i = 1,2500 do
 end
 
 function classifyExample(tensorInput)
+
+  print ('cjson test start...')
+  local tab = {
+  a = "hello",
+  b = 123456,
+  }
+  local json = cjson.encode(tab)
+  print (json)
+  print ('cjson test end...')
+
   v = mlp:forward(tensorInput)
 	print(v[1])
 	return v[1]
